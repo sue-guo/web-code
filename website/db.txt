@@ -1,0 +1,26 @@
+users:
+	Id(pk)
+	username
+	passwd
+	createtime
+blogs
+	Id(pk)
+	userId(fk)
+	title
+	location
+	status (0-unpublished, 1-published)
+	description
+	viwenumber
+	createtime
+	updatetime
+blogDetails
+	id
+	blogId(fk)
+	imagePath
+	description
+comments
+	Id(pk)
+	blogId(fk)
+	userId(fk)
+	content
+	createtime

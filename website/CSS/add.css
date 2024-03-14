@@ -1,0 +1,81 @@
+@import url('nav_footer.css');
+
+
+.nav_flex{
+    display: flex;
+    align-items: center;
+}
+.form-main{
+    width: 60%;
+    margin: 80px auto 0 auto;
+}
+.form-group{
+    margin: 10px 0;
+}
+.form-group label{
+    display: block;
+}
+.form-group textarea{
+    width: 100%;
+    height: 100px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.form-group input{
+    height: 25px;
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid #a7a29d;
+    border-radius: 5px;
+}
+.form-group-img{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px dashed #a7a29d;
+    position: relative;
+}
+.form-group-img span{
+    position: absolute;
+    right: -30px;
+    border: black;
+    background-color: #cfcdcb;
+    color: white;
+    padding: 3px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form-group-img div{
+    flex: 1;
+    margin: 10px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #a7a29d;
+}
+.form-group-img div label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 80px;
+}
+.form-group-img textarea{
+    flex: 1;
+    height: 80px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #a7a29d;
+}
+input[type="file"]{
+    display: none;
+}
+
+.form-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
