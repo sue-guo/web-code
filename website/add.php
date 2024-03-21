@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="css/add.css">
     <script src="js/add.js" defer></script>
 </head>
-<body>
-    <nav class="nav_flex">
-        <img src="images/logo.png" alt="logo">
-        <span class="welcome">Welcome, Sue
-            <a href="index1.html">Log out</a>
-        </span>
-    </nav>
+<body>       
+    <?php include("navEm.php"); ?>
     <main class="form-main">
         <form action="add.php" method="post">
             <div class="form-group">
@@ -52,8 +47,6 @@
         </form>
 
     </main>
-    <footer>
-        <p>© 2024 Myblog Website. All rights reserved.</p>
-    </footer>
+  <?php include("footerEm.php"); ?>
 </body>
 </html>

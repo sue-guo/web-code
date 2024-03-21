@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="css/detail.css">
     <script src="js/detail.js" defer></script>
 </head>
-<body>
-    <nav class="nav_flex">
-        <img src="images/logo.png" alt="logo">
-        <span class="welcome">Welcome, Sue
-            <a href="index1.html">Log out</a>
-        </span>
-    </nav>
+<body>       
+    <?php include("navEm.php"); ?>
     <main class="bg-paper flex-container">
         <article>
             <div class="title_container">
@@ -95,8 +90,6 @@
 
         </aside>
     </main>
-    <footer>
-        <p>© 2024 Myblog Website. All rights reserved.</p>
-    </footer>
+  <?php include("footerEm.php"); ?>
 </body>
 </html>
