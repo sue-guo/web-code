@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="css/login.css">
     <script src="js/add.js" defer></script>
 </head>
-<body>
-    <nav class="nav_flex">
-        <img src="images/logo.png" alt="logo">
-        <span class="welcome">Welcome, Sue
-            <a href="index1.html">Log out</a>
-        </span>
-    </nav>
+<body>       
+    <?php include("navEm.php"); ?>
+    
     <main class="flex_container img_background">
         <article>
             <h2 class="text_shadow">CONTACT US</h2>
@@ -78,7 +74,5 @@
         </form>
 
     </main> -->
-    <footer>
-        <p>© 2024 Myblog Website. All rights reserved.</p>
-    </footer>
+  <?php include("footerEm.php"); ?>
 </body>

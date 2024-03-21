@@ -7,16 +7,8 @@
     <link rel="stylesheet" href="css/list.css">
     <script src="js/index.js" defer></script>
 </head>
-<body>
-    <nav class="nav_flex">
-        <img src="images/logo.png" alt="logo">
-        <span class="welcome">Welcome, Sue
-            <a href="index1.html">Log out</a>
-        </span>
-        <div class="nav_div">
-            <!-- <span>Category▼</span> -->
-        </div>
-    </nav>
+<body>       
+    <?php include("navEm.php"); ?>
     <main>
         <div class="input-container">
             <select name="category" id="" class="category-input">
@@ -30,7 +22,7 @@
         <section>
             <div class="list_container">
                 <div class="list_img">
-                    <a href="detail.html"><img src="images/travel.png" alt="image"></a>
+                    <a href="detail.php"><img src="images/travel.png" alt="image"></a>
                 </div>
                 <div class="list_info">
                     <h3>like this restrand ddddd dddddddddddddddddddd</h3>
@@ -40,7 +32,7 @@
             </div>
             <div class="list_container">
                 <div class="list_img">
-                    <a href="detail.html"><img src="images/food.png" alt="image"></a>
+                    <a href="detail.php"><img src="images/food.png" alt="image"></a>
                 </div>
                 <div class="list_info">
                     <h3>like this restrand ddddd dddddddddddddddddddd</h3>
@@ -50,7 +42,7 @@
             </div>
             <div class="list_container">
                 <div class="list_img">
-                    <a href="detail.html"><img src="images/life.png" alt="image"></a>
+                    <a href="detail.php"><img src="images/life.png" alt="image"></a>
                 </div>
                 <div class="list_info">
                     <h3>like this restrand ddddd dddddddddddddddddddd</h3>
@@ -60,7 +52,7 @@
             </div>
             <div class="list_container">
                 <div class="list_img">
-                    <a href="detail.html"><img src="images/logo.png" alt="image"></a>
+                    <a href="detail.php"><img src="images/logo.png" alt="image"></a>
                 </div>
                 <div class="list_info">
                     <h3>like this restrand ddddd dddddddddddddddddddd</h3>
@@ -70,8 +62,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>© 2024 Myblog Website. All rights reserved.</p>
-    </footer>
+  <?php include("footerEm.php"); ?>
 </body>
 </html>

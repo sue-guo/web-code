@@ -3,6 +3,7 @@ users:
 	username
 	passwd
 	createtime
+	
 blogs
 	Id(pk)
 	userId(fk)
@@ -13,6 +14,7 @@ blogs
 	viwenumber
 	createtime
 	updatetime
+
 blogDetails
 	id
 	blogId(fk)
