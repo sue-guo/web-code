@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Blog</title>
     <link rel="stylesheet" href="css/login.css">
-    <script src="js/add.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </head>
 <body>       
     <?php include("navEm.php"); ?>
@@ -19,7 +19,7 @@
             </p>
         </article>
         <aside>
-            <form action="log_in.html" method="get" onsubmit="return validate();">
+            <form action="contact_confirm.php" method="post" onsubmit="return validate();">
                 <div class="textfield">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name">
