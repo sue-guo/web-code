@@ -2,7 +2,7 @@
 <?php 
     $pageTitle = 'contact us';
     $style = 'stylesheets/login.css';    
-    $jscript = 'js/add.js';
+    $jscript = 'js/contact.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
 ?>
@@ -17,7 +17,7 @@
             </p>
         </article>
         <aside>
-            <form action="log_in.html" method="get" onsubmit="return validate();">
+            <form action="contact_confirm.php" method="post" onsubmit="return validate();">
                 <div class="textfield">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name">
