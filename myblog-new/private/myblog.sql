@@ -21,6 +21,12 @@ SET time_zone = "+00:00";
 -- Database: `myblog`
 --
 
+-- create databse user and password
+CREATE USER 'myblog'@'localhost' IDENTIFIED BY '123456';
+
+GRANT ALL PRIVILEGES ON myblog.* TO 'myblog'@'localhost';
+
+FLUSH PRIVILEGES;
 -- --------------------------------------------------------
 
 --
