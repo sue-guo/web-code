@@ -35,7 +35,7 @@
             <?php foreach($list as $blog): ?>
                 <div class="list_container">
                     <div class="list_img">
-                        <a href="detail.php?blogId=<?php echo $blog['id']?>"">
+                        <a href="detail.php?blogId=<?php echo $blog['id']?>">
                         <?php if(!empty($blog['img'])): ?>    
                             <img src="<?php echo $blog['img'] ?>" alt="image">
                         <?php else: ?>

@@ -49,7 +49,7 @@
     <main class="flex_container img_background">
         <article>
             <h2 class="text_shadow">RECORDE LIFE.</h2>
-            <h2 class="text_shadow">SHERA LIFE.</h2>
+            <h2 class="text_shadow">SHARE LIFE.</h2>
             <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love </p>
         </article>
         <aside>
