@@ -1,7 +1,7 @@
 <?php
     $pageTitle = 'Edit Blog';
     $style = 'stylesheets/add.css';    
-    $jscript = 'js/add.js';
+    $jscript = 'js/edit.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
     //if use the session, need to start the session
@@ -40,25 +40,27 @@
 
         header('Location: list.php');
     }
-
+    close_connection($conn);
 ?>
 
 <?php include('header.php') ?>
     <main class="form-main">
-        <form action="edit.php" method="POST" >
+        <form action="edit.php" method="POST" onsubmit="return validateEdit();">
             <input type="text" name="blogId" value="<?php echo $blogId ?>" hidden>
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required value="<?php echo $blog['title']?>">
+                <input type="text" id="title" name="title" value="<?php echo $blog['title']?>">
+                <span class="errorMsg" id="title_error"></span>
             </div>
             <div class="form-group">
                 <label for="title">Location:</label>
-                <input type="text" id="location" name="location" required value="<?php echo $blog['location'] ?>">
+                <input type="text" id="location" name="location" value="<?php echo $blog['location'] ?>">
+                <span class="errorMsg" id="location_error"></span>
             </div>
             <div class="form-group">
                 <label for="title">Description:</label>
-                <textarea name="description" id="description" placeholder="write details for this blog" required><?php echo $blog['description'] ?>
-                </textarea>
+                <textarea name="description" id="description" placeholder="write details for this blog"><?php echo $blog['description'] ?></textarea>
+                <span class="errorMsg" id="description_error"></span>
             </div>
             <div id="form-group-img-container">
                 <?php if(!empty($blogDetails)): ?>
@@ -67,7 +69,7 @@
                             <div>
                                 <img src="<?php echo $blogDetail['imagePath'] ?>" alt="image">
                             </div>
-                            <textarea name="imgDescription[]" placeholder="write description for this image" required><?php echo $blogDetail['description']?></textarea>
+                            <textarea name="imgDescription[]" placeholder="write description for this image"><?php echo $blogDetail['description']?></textarea>
                             <input type="text" name="blogDetailId[]" value="<?php echo $blogDetail['id'] ?>" hidden>
                         </div>
                     <?php endforeach ?>
@@ -78,7 +80,5 @@
                 <!-- <input type="reset" value="Reset"> -->
             </div>
         </form>
-        <template id="imageTemplate">
-        </template>
     </main>
 <?php include('footer.php') ?>
