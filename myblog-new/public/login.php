@@ -50,7 +50,7 @@
         <article>
             <h2 class="text_shadow">RECORDE LIFE.</h2>
             <h2 class="text_shadow">SHERA LIFE.</h2>
-            <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love </p>
+            <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love. </p>
         </article>
         <aside>
             <h2 class="text_shadow">Log In</h2>
@@ -71,7 +71,6 @@
                     <span class="errorMsg" id="password_span"><?php echo $errors['password']?></span>
                 </div>
                 <div class="buttonfield">
-                    <!-- <button type="submit" class="round_border login_button">Log In</button> -->
                     <input type="submit" name="submit" value="Log In" class="round_border login_button">
                     <input type="checkbox" name="remember" id="remember" 
                     <?php if(isset($_POST['remember'])) echo 'checked'; ?> >
