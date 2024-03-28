@@ -17,7 +17,7 @@
     else{
         header('Location: index.php');
     }
-
+    close_connection($conn);
 ?>
 
 <?php include('header.php')?>
@@ -25,7 +25,7 @@
         <article>
             <div class="title_container">
                 <h2 class="title"><?php echo $blog['title']?></h2>
-                <div class="author"><?php echo $blog['author'] ?>/create time: <?php echo formatDate($blog['createtime'])?></div>
+                <div class="author"><?php echo $blog['author'] ?>/create at: <?php echo formatDate($blog['createtime'])?></div>
                 <div class="">location: <?php echo $blog['location'] ?></div>
                 <p class="detail"><?php echo $blog['description'] ?></p>
             </div>
