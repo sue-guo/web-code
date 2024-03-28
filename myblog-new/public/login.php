@@ -49,8 +49,13 @@
     <main class="flex_container img_background">
         <article>
             <h2 class="text_shadow">RECORDE LIFE.</h2>
+<<<<<<< HEAD
             <h2 class="text_shadow">SHARE LIFE.</h2>
             <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love </p>
+=======
+            <h2 class="text_shadow">SHERA LIFE.</h2>
+            <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love. </p>
+>>>>>>> 6cf5fe9d5ea6692236b5c5b217750b5096f27485
         </article>
         <aside>
             <h2 class="text_shadow">Log In</h2>
@@ -71,7 +76,6 @@
                     <span class="errorMsg" id="password_span"><?php echo $errors['password']?></span>
                 </div>
                 <div class="buttonfield">
-                    <!-- <button type="submit" class="round_border login_button">Log In</button> -->
                     <input type="submit" name="submit" value="Log In" class="round_border login_button">
                     <input type="checkbox" name="remember" id="remember" 
                     <?php if(isset($_POST['remember'])) echo 'checked'; ?> >

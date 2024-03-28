@@ -10,7 +10,7 @@ let password_span = document.getElementById('password_span');
 //if the confirm_password field exists, then it is the sign up page
 let password_confirm = document.getElementById('confirm_password');
 let password_confirm_span = null;
-let signPage = password_confirm !== null;
+let signPage = password_confirm !== null;//if the confirm_password field exists, then it is the sign up page
 if(signPage){
     password_confirm_span = document.getElementById('confirm_password_span');
 }

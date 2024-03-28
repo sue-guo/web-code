@@ -24,6 +24,7 @@
 .input-container label{
     margin-right: 10px;
     font-size: large;
+    text-wrap: nowrap;
 }
 .search-input{
     width: 50%;

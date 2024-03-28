@@ -1,7 +1,7 @@
 <?php
     $pageTitle = 'My Blogs';
     $style = 'stylesheets/list.css';    
-    $jscript = 'js/index.js';
+    $jscript = 'js/list.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
 
@@ -11,7 +11,7 @@
         $title = '';
         $status = '';
         //search data from database,retrun all data as an array
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit']) || isset($_POST['status'])){
             $title = $_POST['title'];
             $status = $_POST['status'];
         }
@@ -27,15 +27,15 @@
 <?php include('header.php') ?>
     <main>
         <div class="input-container">
-                <form action="list.php" method="POST">
+                <form action="list.php" method="POST" id="searchFormId">
                     <input type="radio" name="status" value="" id="all" class="radio-input" 
-                    <?php if($status == '') echo 'checked'?>>
+                    <?php if($status == '') echo 'checked'?> onchange="statusSearch()">
                     <label for="all">ALL</label>
                     <input type="radio" name="status" value="1" id="published" class="radio-input"
-                    <?php if($status == 1) echo 'checked'?>>
+                    <?php if($status == 1) echo 'checked'?> onchange="statusSearch()">
                     <label for="published">published</label>
                     <input type="radio" name="status" value="0" id="unpublished" class="radio-input"
-                    <?php if($status == 0) echo 'checked'?>>
+                    <?php if($status == 0) echo 'checked'?> onchange="statusSearch()">
                     <label for="unpublished">non-published</label>
 
                     <input type="search" placeholder="Search" name="title" class="search-input "

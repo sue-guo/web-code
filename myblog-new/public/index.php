@@ -1,5 +1,5 @@
 <?php 
-    $pageName = 'index';
+    $pageTitle = 'index';
     $style = 'stylesheets/list.css';    
     $jscript = 'js/index.js';
     require('../private/db_connect.php');

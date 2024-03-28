@@ -4,6 +4,7 @@
     $jscript = 'js/contact.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
+    session_start();
 ?>
 <?php include('header.php')?>
 
