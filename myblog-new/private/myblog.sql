@@ -187,9 +187,29 @@ ALTER TABLE `contacts`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
+
 --
--- Constraints for dumped tables
+-- Constraints for table "blogs"
 --
+ALTER TABLE `blogs`
+  ADD KEY `blogs_userId` (`userId`);
+
+ALTER TABLE `blogs`
+  ADD CONSTRAINT `blogs_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+
+--
+-- Constraints for table "comments"
+--
+ALTER TABLE `comments`
+  ADD KEY `comments_blogId` (`blogId`),
+  ADD KEY `comments_userId` (`userId`);
+
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`blogId`) REFERENCES `blogs` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `comments_iufk_2` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+
 
 --
 -- Constraints for table `blogdetails`
