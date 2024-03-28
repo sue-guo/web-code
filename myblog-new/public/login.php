@@ -49,13 +49,11 @@
     <main class="flex_container img_background">
         <article>
             <h2 class="text_shadow">RECORDE LIFE.</h2>
-<<<<<<< HEAD
             <h2 class="text_shadow">SHARE LIFE.</h2>
             <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love </p>
-=======
-            <h2 class="text_shadow">SHERA LIFE.</h2>
-            <p class="text_center left-p">Life is worth recording and sharing, record the beauty and share the love. </p>
->>>>>>> 6cf5fe9d5ea6692236b5c5b217750b5096f27485
+
+
+
         </article>
         <aside>
             <h2 class="text_shadow">Log In</h2>
