@@ -211,6 +211,7 @@ ALTER TABLE `comments`
 
 
 
+
 --
 -- Constraints for table `blogdetails`
 --
