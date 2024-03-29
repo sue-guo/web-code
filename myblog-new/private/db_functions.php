@@ -130,4 +130,15 @@ function formatStatus($status){
     return $statusName;
 }
 
+
+
+// delete blog
+function deleteBlogById($conn, $blogId){
+    $sql = "delete from blogs where id = $blogId";
+    $result = mysqli_query($conn, $sql);
+    return $result;
+}
+
+
+
 ?>

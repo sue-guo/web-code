@@ -44,9 +44,9 @@ CREATE TABLE `blogdetails` (
 -- Dumping data for table `blogdetails`
 --
 
-INSERT INTO `blogdetails` (`id`, `blogId`, `imagePath`, `description`) VALUES
-(21, 24, 'images/test/1701978755859.jpg', 'test'),
-(22, 25, 'images/aaaa/1.png', 'sssssssssssss');
+-- INSERT INTO `blogdetails` (`id`, `blogId`, `imagePath`, `description`) VALUES
+-- (21, 24, 'images/test/1701978755859.jpg', 'test'),
+-- (22, 25, 'images/aaaa/1.png', 'sssssssssssss');
 
 -- --------------------------------------------------------
 
@@ -70,9 +70,9 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `userId`, `title`, `location`, `status`, `description`, `viewcount`, `createtime`, `updatetime`) VALUES
-(24, 7, 'test', 'test', 0, 0x74657374, NULL, '2024-03-21 21:46:51', NULL),
-(25, 8, 'test', 'test', 0, 0x7373737373, NULL, '2024-03-25 19:48:18', NULL);
+-- INSERT INTO `blogs` (`id`, `userId`, `title`, `location`, `status`, `description`, `viewcount`, `createtime`, `updatetime`) VALUES
+-- (24, 7, 'test', 'test', 0, 0x74657374, NULL, '2024-03-21 21:46:51', NULL),
+-- (25, 8, 'test', 'test', 0, 0x7373737373, NULL, '2024-03-25 19:48:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -120,9 +120,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `passwd`, `createtime`) VALUES
-(7, 'test', '$2y$10$3uOyMhjxfMxrqF1u9SEwcuH492I49u7pd1n7bNFa237Z9.W17kk4G', '2024-03-21 21:46:02'),
-(8, 'aaaa', '$2y$10$Wc4V8N4PeQUyqH.rkepzSOObX1JafrCyJSbW3dlFXH9j1/iEwAZpm', '2024-03-25 18:45:12');
+-- INSERT INTO `users` (`id`, `username`, `passwd`, `createtime`) VALUES
+-- (7, 'test', '$2y$10$3uOyMhjxfMxrqF1u9SEwcuH492I49u7pd1n7bNFa237Z9.W17kk4G', '2024-03-21 21:46:02'),
+-- (8, 'aaaa', '$2y$10$Wc4V8N4PeQUyqH.rkepzSOObX1JafrCyJSbW3dlFXH9j1/iEwAZpm', '2024-03-25 18:45:12');
 
 --
 -- Indexes for dumped tables

@@ -52,12 +52,12 @@
                 <span class="errorMsg" id="title_error"></span>
             </div>
             <div class="form-group">
-                <label for="title">Location:</label>
+                <label for="location">Location:</label>
                 <input type="text" id="location" name="location">
                 <span class="errorMsg" id="location_error"></span>
             </div>
             <div class="form-group">
-                <label for="title">Description:</label>
+                <label for="description">Description:</label>
                 <textarea name="description" id="description" placeholder="write details for this blog"></textarea>
                 <span class="errorMsg" id="description_error"></span>
             </div>
@@ -66,7 +66,7 @@
             </div>
             <span class="errorMsg" id="img_error"></span>
             <div class="form-button" id="form-button">
-                <input type="button" value="More Image" onclick="addImageDiv1();" ">
+                <input type="button" value="More Image" onclick="addImageDiv1();">
                 <input type="submit" name="submit" value="Submit">
                 <input type="reset" value="Reset" id="reset">
             </div>

@@ -1,7 +1,7 @@
 <?php
     $pageTitle = 'detail';
     $style = 'stylesheets/detail.css';    
-    $jscript = 'js/detail.js';
+    $jscript = 'js/delete.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
 
@@ -61,19 +61,19 @@
             </section>
         </article>
         <aside>
-            <?php if(isset($_SESSION['username'])): ?>
+            <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $blog['author'] ): ?>
                 <div class="comment_add">
                     <a href="edit.php?blogId=<?php echo $blog['id']?>"><button>Edit</button></a>
-                    <a href="delete.php"><button>Delete</button></a>
+                    <a href="#" onclick="confirmDelete(<?php echo $blog['id']?>)"><button>Delete</button></a>
                     <a href="publish.php"><button>Publish</button></a>
                 </div>
             <?php endif ?>
             <h3>Comments</h3>
-            <?php if(!isset($_SESSION['username'])): ?>
+            <?php if(isset($_SESSION['username'])): ?>
                 <div class="comment_add">
                     <form action="">
                         <textarea name="comment" id="comment" placeholder="Leave a comment"></textarea>
-                        <button type="submit">comment</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
             <?php endif ?>

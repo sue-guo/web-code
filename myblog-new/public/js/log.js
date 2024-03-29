@@ -102,8 +102,6 @@ if(signPage){
 document.getElementById("reset").addEventListener("click",function(){
     resetUsernameError();
     resetPasswordError();
-    if(signPage){
-        resetPasswordConfirmError();
-    }
+    resetPasswordConfirmError();
  });
 }
