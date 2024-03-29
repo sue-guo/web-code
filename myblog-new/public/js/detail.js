@@ -10,3 +10,19 @@ function confirmPublish(blogId) {
     }
 }
 
+// valiadate comment
+let comment = document.getElementById("comment");
+let comment_error = document.getElementById("comment_error");
+
+function validateComment() {
+    let valid = true;
+    if (comment.value == "") {
+        comment_error.innerHTML = "Please enter a comment.";
+        valid = false;
+    }
+    return valid;
+}
+
+    comment.addEventListener('focus', function(){
+        comment_error.innerHTML = "";
+    });

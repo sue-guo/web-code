@@ -147,4 +147,28 @@ function publishBlogById($conn, $blogId){
     return $result;
 }
 
+
+// insert comment
+function insertComment($conn, $blogId, $userId, $comment){
+    $sql = "insert into comments(blogId, userId, content)"
+            ." values($blogId, $userId, '$comment')";
+    $result = mysqli_query($conn, $sql);
+    return $result;
+}
+
+
+// search comments by blog id
+function searchCommentsByBlogId($conn, $blogId){
+    $sql = "select t1.*, t2.username as author"
+            ." from comments t1 left join users t2 on t1.userId = t2.id where 1";
+    if($blogId != ""){
+        $sql .= " and t1.blogId = $blogId";
+    }
+    $result = mysqli_query($conn, $sql);
+    $comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $comments;
+}
+
+
+
 ?>

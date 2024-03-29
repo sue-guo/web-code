@@ -1,6 +1,6 @@
 <?php
     $pageTitle = 'detail';
-    $style = 'stylesheets/detail.css';    
+    $style = 'stylesheets/detail_new.css';    
     $jscript = 'js/detail.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
@@ -17,6 +17,20 @@
     else{
         header('Location: index.php');
     }
+
+    // insert comment in db
+    if (isset($_POST['submit'])) {
+        $comment = mysqli_real_escape_string($conn, $_POST['comment']);
+        $userId = $_SESSION['user_id'];
+        $blogId = $_GET['blogId'];
+            if ($comment != '') {
+            insertComment($conn, $blogId, $userId, $comment);
+        }
+    }
+
+    // retrieve comments from db
+    $comments = searchCommentsByBlogId($conn, $blogId);
+
     close_connection($conn);
 ?>
 
@@ -80,42 +94,26 @@
             <h3>Comments</h3>
             <?php if(isset($_SESSION['username'])): ?>
                 <div class="comment_add">
-                    <form action="">
+                    <form action="detail.php?blogId=<?php echo $blog['id']?>" method="POST" onsubmit="return validateComment()">
                         <textarea name="comment" id="comment" placeholder="Leave a comment"></textarea>
-                        <button type="submit">Submit</button>
+                        <span class="errorMsg" id="comment_error"></span>
+                        <input type="submit" name="submit" value="Submit">
                     </form>
                 </div>
             <?php endif ?>
 
-            <div class="comment_container">
-                <div class="comment_info">
-                    <div class="comment_user">@Amy</div>
-                    <div class="comment_date">2024-10-33</div>
-                </div>
-                <div class="comment_content">I like this restrandxscsd dg rg reg gergg erg
-                    sdddddddddddddddddddddddddddsfdv etrg tergr</div>
-            </div>
-            <div class="comment_container">
-                <div class="comment_info">
-                    <div class="comment_user">@Amy</div>
-                    <div class="comment_date">2024-10-33</div>
-                </div>
-                <div class="comment_content">I like this restrand</div>
-            </div>
-            <div class="comment_container">
-                <div class="comment_info">
-                    <div class="comment_user">@Amy</div>
-                    <div class="comment_date">2024-10-33</div>
-                </div>
-                <div class="comment_content">I like this restrand</div>
-            </div>
-            <div class="comment_container">
-                <div class="comment_info">
-                    <div class="comment_user">@Amy</div>
-                    <div class="comment_date">2024-10-33</div>
-                </div>
-                <div class="comment_content">I like this restrand</div>
-            </div>
+            <?php if(!empty($comments)): ?>
+                <?php foreach($comments as $comment): ?>
+                    <div class="comment_container">
+                        <div class="comment_info">
+                            <div class="comment_user"> @ <?php echo $comment['author']?></div>
+                            <div class="comment_date"><?php echo formatDate($comment['createtime'])?></div>
+                        </div>
+                        <div class="comment_content"><?php echo $comment['content']?></div>
+                    </div>
+                <?php endforeach ?>
+            <?php endif ?>
+
 
         </aside>
     </main>
