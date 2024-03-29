@@ -140,5 +140,11 @@ function deleteBlogById($conn, $blogId){
 }
 
 
+// Publish bolg
+function publishBlogById($conn, $blogId){
+    $sql = "update blogs set status = 1 where id = $blogId";
+    $result = mysqli_query($conn, $sql);
+    return $result;
+}
 
 ?>

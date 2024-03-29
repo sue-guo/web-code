@@ -1,7 +1,7 @@
 <?php
     $pageTitle = 'detail';
     $style = 'stylesheets/detail.css';    
-    $jscript = 'js/delete.js';
+    $jscript = 'js/detail.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');
 
@@ -61,13 +61,22 @@
             </section>
         </article>
         <aside>
-            <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $blog['author'] ): ?>
+            <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $blog['author'] && $blog['status'] == 1): ?>
                 <div class="comment_add">
                     <a href="edit.php?blogId=<?php echo $blog['id']?>"><button>Edit</button></a>
                     <a href="#" onclick="confirmDelete(<?php echo $blog['id']?>)"><button>Delete</button></a>
-                    <a href="publish.php"><button>Publish</button></a>
+                    <a href="#" onclick="confirmPublish(<?php echo $blog['id']?>)" hidden><button>Publish</button></a>
                 </div>
             <?php endif ?>
+            <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $blog['author'] && $blog['status'] == 0): ?>
+                <div class="comment_add">
+                    <a href="edit.php?blogId=<?php echo $blog['id']?>"><button>Edit</button></a>
+                    <a href="#" onclick="confirmDelete(<?php echo $blog['id']?>)"><button>Delete</button></a>
+                    <a href="#" onclick="confirmPublish(<?php echo $blog['id']?>)"><button>Publish</button></a>
+                </div>
+            <?php endif ?>
+
+
             <h3>Comments</h3>
             <?php if(isset($_SESSION['username'])): ?>
                 <div class="comment_add">
