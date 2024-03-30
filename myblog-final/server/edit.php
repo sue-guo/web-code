@@ -34,7 +34,7 @@ Jiayun Wang: design the database structure
             //count the number of images
             $count = count($_POST['blogDetailId']);
             for($i = 0; $i < $count; $i++){
-                updateBlogDetailById($conn, $_POST['blogDetailId'][$i], mysqli_real_escape_string($_POST['imgDescription'][$i]));
+                updateBlogDetailById($conn, $_POST['blogDetailId'][$i], mysqli_real_escape_string($conn,$_POST['imgDescription'][$i]));
             }
         }else{
             echo 'edit blog query error: ' . mysqli_error($conn);
