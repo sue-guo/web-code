@@ -6,7 +6,7 @@ implement detail blog function; implement submit comment function; implement dis
 -->
 <?php
     $pageTitle = 'detail';
-    $style = '../stylesheets/detail_new_.css';    
+    $style = '../stylesheets/detail.css';    
     $jscript = '../scripts/detail.js';
     require_once('db_connect.php');
     include_once('db_functions.php');

@@ -5,7 +5,7 @@ Jiayun Wang: design the database structure
 -->
 <?php
     $pageTitle = 'Edit Blog';
-    $style = '../stylesheets/add_new.css';    
+    $style = '../stylesheets/add.css';    
     $jscript = '../scripts/edit.js';
     require_once('db_connect.php');
     include_once('db_functions.php');
@@ -28,16 +28,13 @@ Jiayun Wang: design the database structure
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $location = mysqli_real_escape_string($conn, $_POST['location']);
         $description = mysqli_real_escape_string($conn, $_POST['description']);
-        echo $blogId;
-        echo $title;
         updateBlogById($conn, $blogId, $userId, $title, $location, $description, "", "");
 
         if(isset($_POST['imgDescription'])){
             //count the number of images
             $count = count($_POST['blogDetailId']);
-            echo $count;
             for($i = 0; $i < $count; $i++){
-                updateBlogDetailById($conn, $_POST['blogDetailId'][$i], $_POST['imgDescription'][$i]);
+                updateBlogDetailById($conn, $_POST['blogDetailId'][$i], mysqli_real_escape_string($_POST['imgDescription'][$i]));
             }
         }else{
             echo 'edit blog query error: ' . mysqli_error($conn);

@@ -127,6 +127,7 @@ function formatDate($time){
     $time = strtotime($time);
     return date('Y-m-d', $time);
 }
+
 /*return the status name*/
 function formatStatus($status){
     $statusName = '';

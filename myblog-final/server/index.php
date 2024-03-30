@@ -6,7 +6,7 @@ Jiayun Wang: PHP: displays all blogs that are published and sort by publish time
 -->
 <?php 
     $pageTitle = 'index';
-    $style = '../stylesheets/list_new.css';    
+    $style = '../stylesheets/list.css';    
     $jscript = '../scripts/index.js';
     require('db_connect.php');
     include('db_functions.php');

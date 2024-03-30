@@ -5,7 +5,7 @@ HuaiFang Yin: JavaScript,PHP: implement client-side validation for contact form,
 -->
 <?php 
     $pageTitle = 'contact us';
-    $style = '../stylesheets/login_new.css';    
+    $style = '../stylesheets/login.css';    
     $jscript = '../scripts/contact.js';
     require_once('db_connect.php');
     include_once('db_functions.php');
