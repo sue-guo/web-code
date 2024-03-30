@@ -29,10 +29,10 @@
 ?>
 
 <main class="flex_container img_background">
-        <article>
+        <div>
             <h2 class="text_shadow">CONTACT US</h2>
             <h2 class="text_shadow"></h2>
             <p class="text_center left-p">Thanks for your message!</p>
-        </article>
+        </div>
 </main>
 <?php include('footer.php')?>
