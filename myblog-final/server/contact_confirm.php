@@ -3,10 +3,10 @@ HuaiFang Yin: implement contact us function
 -->
 <?php 
     $pageTitle = 'contact us';
-    $style = 'stylesheets/login.css';    
-    $jscript = 'js/contact.js';
-    require_once('../private/db_connect.php');
-    include_once('../private/db_functions.php');
+    $style = '../stylesheets/login.css';    
+    $jscript = '../scripts/contact.js';
+    require_once('db_connect.php');
+    include_once('db_functions.php');
     session_start();
 ?>
 <?php include('header.php')?>
@@ -32,10 +32,10 @@ HuaiFang Yin: implement contact us function
 ?>
 
 <main class="flex_container img_background">
-        <article>
+        <div>
             <h2 class="text_shadow">CONTACT US</h2>
             <h2 class="text_shadow"></h2>
             <p class="text_center left-p">Thanks for your message!</p>
-        </article>
+        </div>
 </main>
 <?php include('footer.php')?>
