@@ -6,7 +6,7 @@ Jiayun Wang: design the database structure
 -->
 <?php
     $pageTitle = 'My Blogs';
-    $style = '../stylesheets/list.css';    
+    $style = '../stylesheets/list_new.css';    
     $jscript = '../scripts/list.js';
     require_once('db_connect.php');
     include_once('db_functions.php');

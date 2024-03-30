@@ -1,9 +1,15 @@
-@import url('nav_footer.css');
+@import url('nav_footer_new.css');
 @import url(//fonts.googleapis.com/css?family=Oswald);
 @import url(//fonts.googleapis.com/css?family=Nanum+Myeongjo);
 @import url(//fonts.googleapis.com/css?family=Satisfy);
 @import url(//fonts.googleapis.com/css?family=Lora);
 @import url(//fonts.googleapis.com/css?family=Cormorant+Garamond);
+
+
+body {
+    background-color: #f8f6ea; 
+}
+
 
 .title_container{
     display: flex;
@@ -91,6 +97,11 @@ aside h3{
     border-radius: 5px;
     border: 1px solid #a7a29d;
 }
-.comment_add button{
+button{
     width: 50%;
+}
+
+.errorMsg{
+    color: red;
+    font-size: 13px;
 }

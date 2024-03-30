@@ -3,7 +3,7 @@ HuaiFang Yin: implement contact us function
 -->
 <?php 
     $pageTitle = 'contact us';
-    $style = 'stylesheets/login.css';    
+    $style = 'stylesheets/login_new.css';    
     $jscript = 'js/contact.js';
     require_once('../private/db_connect.php');
     include_once('../private/db_functions.php');

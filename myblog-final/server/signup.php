@@ -6,7 +6,7 @@ Huaifang Yin: implement client-side validation using Javascript and server-side 
 -->
 <?php
     $pageTitle = 'Sign Up';
-    $style = '../stylesheets/login.css';    
+    $style = '../stylesheets/login_new.css';    
     $jscript = '../scripts/log.js';
 
     require_once('db_connect.php');

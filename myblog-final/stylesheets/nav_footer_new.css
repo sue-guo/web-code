@@ -10,7 +10,7 @@ main{
 }
 nav{
     display: block;
-    background-color: #fff;
+    background-color: #ece9df;
     padding: 10px;
     position: fixed;
     width: 100%;
@@ -30,7 +30,7 @@ nav img{
 
 footer{
     display: block;
-    background-color: #fff;
+    background-color: #f8f6ea;
     width: 100%;
     height: 40px;
 }

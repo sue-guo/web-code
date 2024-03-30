@@ -32,7 +32,8 @@ data：
 Toronto
 Toronto has famous attractions like the CN Tower, 
 Casa Loma, the Hockey Hall of Fame, the Art Gallery of Ontario, and the Royal Ontario Museum.
-The Toronto sign in Nathan Phillips Square illuminated at night.
+1.The Toronto sign in Nathan Phillips Square illuminated at night.
+2. Yonge-Dundas Square
 
 Ottawa
 The city of Ottawa is located in the Canadian province of Ontario. It is the sixth largest city in the country 
@@ -43,6 +44,5 @@ A view of the Parliament of Canada and the Ottawa River.
 Vancouver
 Vancouver might be Canada’s third biggest city, but you’ve got to get out of the urban center and into nature. 
 It’s on the ocean, is replete with parks and beaches, and there are mountains nearby for hiking in summer and skiing in winter. 
-All in all, there’s an overwhelming number of outdoor activities to enjoy, including but not limited to sailing, whale watching, 
-salmon fishing, ziplining, kayaking, swimming, paddle boarding, and biking.
+All in all, there’s an overwhelming number of outdoor activities to enjoy, including but not limited to sailing, whale watching, salmon fishing, ziplining, kayaking, swimming, paddle boarding, and biking.
 Welcome to Stanley Park, Vancouver's first, largest, and most beloved urban park!
