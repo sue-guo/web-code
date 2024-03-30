@@ -60,8 +60,6 @@ function validateUser() {
     let value = user.value.trim();
     if(value == ""){
         user_error_msg = "please enter a username";
-    }else if(value.length < 4){
-        user_error_msg = "The user must be at least 4 characters long";
     }
 }
 
@@ -69,8 +67,6 @@ function validateSubject() {
     let value = subject.value.trim();
     if(value == ""){
         subject_error_msg = "please enter subject";
-    }else if(value.length < 10){
-        subject_error_msg = "The subject must be at least 10 characters long";
     }
 }
 
@@ -78,8 +74,6 @@ function validateMessage() {
     let value  = message.value.trim();
     if(value == ""){
         message_error_msg = "please enter message";
-    }else if(value.length < 30){
-        message_error_msg = "The message must be at least 30 characters long";
     }
 }
 

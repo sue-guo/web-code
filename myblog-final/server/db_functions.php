@@ -16,6 +16,7 @@ function searchAllPublished($conn, $title){
     if($title != ""){
         $sql .= " and t1.title like '%$title%'";
     }
+    $sql .= " order by t1.updatetime desc";
     $result = mysqli_query($conn, $sql);
     $list = mysqli_fetch_all($result, MYSQLI_ASSOC);
     return $list;
@@ -149,7 +150,7 @@ function deleteBlogById($conn, $blogId){
 
 // Publish bolg
 function publishBlogById($conn, $blogId){
-    $sql = "update blogs set status = 1 where id = $blogId";
+    $sql = "update blogs set status = 1, updatetime = now() where id = $blogId";
     $result = mysqli_query($conn, $sql);
     return $result;
 }
