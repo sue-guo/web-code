@@ -3,11 +3,6 @@ let user_span = document.createElement('span');
 user_span.setAttribute("class", "errorMsg");
 user.after(user_span);
 
-let subject = document.getElementById('subject');
-let subject_span = document.createElement('span');
-subject_span.setAttribute("class", "errorMsg");
-subject.after(subject_span);
-
 let message = document.getElementById('message');
 let message_span = document.createElement('span');
 message_span.setAttribute("class", "errorMsg");
@@ -21,7 +16,6 @@ email.after(email_span);
 
 let noError = "";
 let user_error_msg = noError;
-let subject_error_msg = noError;
 let email_error_msg = noError;
 let message_error_msg = noError;
 
@@ -29,17 +23,11 @@ function validate(){
     let valid = true;
 
     validateUser();
-    validateSubject();
     vaildateEmail();
     validateMessage();
 
     if(user_error_msg !== noError){
         user_span.textContent = user_error_msg;
-        valid = false;
-    }
-    
-    if(subject_error_msg !== noError){
-        subject_span.textContent = subject_error_msg;
         valid = false;
     }
     
@@ -60,13 +48,6 @@ function validateUser() {
     let value = user.value.trim();
     if(value == ""){
         user_error_msg = "please enter a username";
-    }
-}
-
-function validateSubject() {
-    let value = subject.value.trim();
-    if(value == ""){
-        subject_error_msg = "please enter subject";
     }
 }
 
@@ -94,11 +75,6 @@ function resetUserError(){
     user_span.textContent = noError;
 }
 
-function resetSubjectError(){
-    subject_error_msg = noError;
-    subject_span.textContent = noError;
-}
-
 function resetEmailError(){
     email_error_msg = noError;
     email_span.textContent = noError;
@@ -110,6 +86,5 @@ function resetMessageError(){
 }
 
 user.addEventListener("focus",resetUserError);
-subject.addEventListener("focus",resetSubjectError);
 email.addEventListener("focus",resetEmailError);
 message.addEventListener("focus",resetMessageError);
